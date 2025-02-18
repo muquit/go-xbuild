@@ -10,8 +10,6 @@
 # often but whenever the time comes to relase using GoReleaser, something
 # has changed.
 #
-# Project home: https://github.com/muquit/go-xbuild
-#
 # muquit@muquit.com Nov-26-2023 
 ########################################################################
 
@@ -51,7 +49,7 @@ fail() {
 take_checksum() {
     local -r version=$1
     local -r archive=$2
-    local -r checksum_file="${BINDIR}/${version}-${CHECKSUMS_FILE}"
+    local -r checksum_file="${BINDIR}/${PROJECT_NAME}-${version}-${CHECKSUMS_FILE}"
     sha256sum "${archive}" >> "${checksum_file}"
 }
 
@@ -103,8 +101,8 @@ build_pi() {
     local -r variant=$2
     local -r arm_version=$3
     
-    local -r dist_dir="${version}-raspberry-pi${variant}.d"
-    local -r binary_name="${version}-raspberry-pi${variant}"
+    local -r dist_dir="${PROJECT_NAME}-${version}-raspberry-pi${variant}.d"
+    local -r binary_name="${PROJECT_NAME}-${version}-raspberry-pi${variant}"
     
     # set raspberry pi build environment
     export GOOS=linux
@@ -129,7 +127,7 @@ main() {
     echo "building ${PROJECT_NAME} version ${version}"
     
     # clean existing checksums
-    rm -f "${BINDIR}/${version}-${CHECKSUMS_FILE}"
+    rm -f "${BINDIR}/${PROJECT_NAME}-${version}-${CHECKSUMS_FILE}"
     
     # build for platforms in platforms.txt
     while read -r line; do
@@ -139,8 +137,8 @@ main() {
         
         echo "building for ${GOOS}/${GOARCH}"
         
-        local dist_dir="${version}-${GOOS}-${GOARCH}.d"
-        local binary_name="${version}-${GOOS}-${GOARCH}"
+        local dist_dir="${PROJECT_NAME}-${version}-${GOOS}-${GOARCH}.d"
+        local binary_name="${PROJECT_NAME}-${version}-${GOOS}-${GOARCH}"
         [[ ${GOOS} == 'windows' ]] && binary_name="${binary_name}.exe"
         
         go build -ldflags="-${LDFLAGS}" ${BUILD_FLAGS} -o "${binary_name}"
