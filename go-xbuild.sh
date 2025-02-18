@@ -7,7 +7,7 @@
 # platform.
 #
 # It was written from the frustration of using  GoReleaser. I do not release 
-# often but whenever the time comes to relase using GoReleaser, something
+# often but whenever the time comes to release using GoReleaser, something
 # has changed.
 #
 # muquit@muquit.com Nov-26-2023 
