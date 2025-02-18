@@ -6,6 +6,9 @@ Cross compile Go projects without the complexity of
 It was written from the frustration of using [GoReleaser](https://goreleaser.com/). I don't 
 release often, whenever the time comes to release using GoReleaser, 
 something has changed.
+I got tired of dealing with GoReleaser's complexity when I only release
+software occasionally. When I release every 6-12 months or so, GoReleaser's
+config often needs updates due to changes. This simple script just works.
 
 ## Features
 - Simple to use and maintain
@@ -83,11 +86,6 @@ The following files will be included in archives if they exist:
 - README.md
 - LICENSE.txt
 - docs/project-name.1 (man page)
-
-## Why This Exists
-I got tired of dealing with GoReleaser's complexity when I only release 
-software occasionally. When you release every 6-12 months, GoReleaser's 
-config often needs updates due to changes. This simple script just works.
 
 ## Contributing
 Pull requests welcome! Please keep it simple.
