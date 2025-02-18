@@ -68,13 +68,13 @@ The script will:
 ## Output Structure
 ```
 bin/
-├── v1.0.0-darwin-amd64.d.tar.gz
-├── v1.0.0-darwin-arm64.d.tar.gz
-├── v1.0.0-windows-amd64.d.zip
-├── v1.0.0-linux-amd64.d.tar.gz
-├── v1.0.0-raspberry-pi.d.tar.gz
-├── v1.0.0-raspberry-pi-jessie.d.tar.gz
-└── v1.0.0-checksums.txt
+├── project-v1.0.0-darwin-amd64.d.tar.gz
+├── project-v1.0.0-darwin-arm64.d.tar.gz
+├── project-v1.0.0-windows-amd64.d.zip
+├── project-v1.0.0-linux-amd64.d.tar.gz
+├── project-v1.0.0-raspberry-pi.d.tar.gz
+├── project-v1.0.0-raspberry-pi-jessie.d.tar.gz
+└── project-v1.0.0-checksums.txt
 ```
 
 ## Included Files
