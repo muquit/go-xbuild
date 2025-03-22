@@ -7,7 +7,7 @@
 # platform.
 #
 # It was written from the frustration of using  GoReleaser. I do not release 
-# often but whenever the time comes to release using GoReleaser, something
+# often but whenever the time comes to relase using GoReleaser, something
 # has changed.
 #
 # muquit@muquit.com Nov-26-2023 
@@ -49,8 +49,13 @@ fail() {
 take_checksum() {
     local -r version=$1
     local -r archive=$2
-    local -r checksum_file="${BINDIR}/${PROJECT_NAME}-${version}-${CHECKSUMS_FILE}"
-    sha256sum "${archive}" >> "${checksum_file}"
+    local -r checksum_filename="${PROJECT_NAME}-${version}-${CHECKSUMS_FILE}"
+    local -r checksum_file="${BINDIR}/${checksum_filename}"
+    
+    # Change to bin directory to get relative paths in checksums
+    pushd "${BINDIR}" > /dev/null
+    sha256sum "${archive}" >> "${checksum_filename}"
+    popd > /dev/null
 }
 
 # copy required files to distribution directory
@@ -91,7 +96,7 @@ create_archive() {
     
     # move archive to bin directory and cleanup
     mv "${archive_name}" "${BINDIR}/" || fail "failed to move archive to bin directory"
-    take_checksum "${version}" "${BINDIR}/$(basename ${archive_name})"
+    take_checksum "${version}" "$(basename ${archive_name})"
     cleanup_dir "${dist_dir}"
 }
 
