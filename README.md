@@ -95,5 +95,3 @@ Pull requests welcome! Please keep it simple.
 ## License
 MIT License - See LICENSE.txt file for details.
 
-## Author
-muquit@muquit.com
