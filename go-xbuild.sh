@@ -1,7 +1,7 @@
 #!/bin/bash
 
 ########################################################################
-# Cross compile mailsend-go
+# Cross compile go programs
 #
 # Please look at platforms.txt if you want to compile for a specific 
 # platform.
