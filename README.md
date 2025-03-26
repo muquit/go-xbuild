@@ -10,6 +10,8 @@ I got tired of dealing with GoReleaser's complexity when I only release
 software occasionally. When I release every 6-12 months or so, GoReleaser's
 config often needs updates due to changes. This simple script just works.
 
+For [Go](https://go.dev/) port of this scripe, please look at: https://github.com/muquit/go-xbuild-go
+
 ## Features
 - Simple to use and maintain
 - Cross compile for multiple platforms
