@@ -92,8 +92,5 @@ The following files will be included in archives if they exist:
 ## Contributing
 Pull requests welcome! Please keep it simple.
 
-## License
-MIT License. See LICENSE.txt
-
 ## Author
 muquit@muquit.com
