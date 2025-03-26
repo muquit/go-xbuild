@@ -1,7 +1,6 @@
 # go-xbuild
 
-Cross compile Go projects without the complexity of 
-[GoReleaser](https://goreleaser.com/)
+A bash script to ross compile Go projects without the complexity of [GoReleaser](https://goreleaser.com/)
 
 It was written from the frustration of using [GoReleaser](https://goreleaser.com/). I don't 
 release often, whenever the time comes to release using GoReleaser, 
