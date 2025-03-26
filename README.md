@@ -1,6 +1,7 @@
 # go-xbuild
 
-A bash script to ross compile Go projects without the complexity of [GoReleaser](https://goreleaser.com/)
+A bash script to ross compile Go projects without the complexity of [GoReleaser](https://goreleaser.com/).
+For [Go](https://go.dev/) port of this script, please look at: https://github.com/muquit/go-xbuild-go
 
 It was written from the frustration of using [GoReleaser](https://goreleaser.com/). I don't 
 release often, whenever the time comes to release using GoReleaser, 
@@ -9,7 +10,6 @@ I got tired of dealing with GoReleaser's complexity when I only release
 software occasionally. When I release every 6-12 months or so, GoReleaser's
 config often needs updates due to changes. This simple script just works.
 
-For [Go](https://go.dev/) port of this scripe, please look at: https://github.com/muquit/go-xbuild-go
 
 ## Features
 - Simple to use and maintain
