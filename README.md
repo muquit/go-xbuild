@@ -1,5 +1,8 @@
 # go-xbuild
 
+**This project is now deprecated, please use
+https://github.com/muquit/go-xbuild-go instead**
+
 A bash script to ross compile Go projects without the complexity of [GoReleaser](https://goreleaser.com/).
 For [Go](https://go.dev/) port of this script, please look at: https://github.com/muquit/go-xbuild-go
 
